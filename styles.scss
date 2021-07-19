@@ -1,0 +1,279 @@
+@import "partials";
+
+
+html{
+    width: 100vw - 1.4vw;
+    height: 100vh;
+    
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    line-height: 1.4;
+    font-size: $fontsize;
+    
+}
+
+.card {
+    width:500px;
+ 
+}
+
+.main__container {
+    height: 400px;
+    background-color: $clr-white;
+    display: flex;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -1px 5px 0px grey;
+    
+
+    & .main__info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        padding: 20px;
+
+
+    }
+
+    p {
+        @include paragraph;
+
+    }
+}
+
+.profile__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+
+    & .profile__img {
+        @include profilepic;
+    }
+
+}
+
+.footer__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+    background-color: $footer-color;
+    color: $footer-text;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 2px 20px -1px rgb(107, 107, 107);
+
+    ul {
+        list-style: none;
+        text-align: center;
+        padding-right: 10px;
+
+    }
+
+    a {
+        @include linkstyle;
+    }
+}
+
+// portfolio
+
+.container__portfolio {
+    // box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns:  1fr;
+    
+   
+}
+
+
+.image__site {
+
+    width: 100%;
+    height: 100%;
+    transition: .80s ease-in-out;
+    position: relative;
+
+    &:hover {
+        opacity: 0;
+        transition: .45s ease-in-out;
+    }
+}
+
+.site__thumb {
+    
+    background: rgb(68, 59, 59);
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+
+}
+
+.button__inner {
+    position: absolute;
+}
+
+//social buttons
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    color: $clr-white;
+    align-items: flex-end;
+    
+
+    & .button {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        margin: 0 5px;
+        overflow: hidden;
+        background: white;
+        cursor: pointer;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-out;
+    }
+    & .button:hover {
+        width: 300px;
+    }
+    & .button .icon{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 60px;
+    }
+    & .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+
+    }
+
+}
+
+.wrapper a{
+    color: white;
+}
+
+.wrapper .button span{
+    font-size: 20px;
+    font-weight: 500px;
+    line-height: 60px; 
+    margin-left: 10px;
+}
+
+
+
+.wrapper .blog{
+    background-color: $clr-blog;
+}
+.wrapper .twitter{
+    background-color:$clr-twitter;
+}
+.wrapper .linkedin{
+    background-color: $clr-linkedin;
+}
+.wrapper .facebook{
+    background-color: $clr-facebook;
+}
+.wrapper .github{
+    background-color: $clr-github;
+}
+
+
+
+
+.fa-laptop-code::before {
+    content: "\f5fc";
+    font-family: "Font Awesome 5 Free"; 
+	font-weight: 900;
+    display: inline-block;
+     text-align: center;
+      width: 35px;
+}
+.fa-twitter::before {
+    content: "\f099";
+    font-family: "Font Awesome 5 Brands"; 
+	font-weight: 900;
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    
+}
+.fa-linkedin-in::before {
+    content: "\f0e1";
+    font-family: "Font Awesome 5 Brands"; 
+	font-weight: 900;
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    
+}
+    
+
+.fa-facebook-f::before {
+    content: "\f39e";
+    font-family: "Font Awesome 5 Brands"; 
+	font-weight: 900;
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    
+}
+.fa-github::before {
+    content: "\f09b";
+    font-family: "Font Awesome 5 Brands"; 
+	font-weight: 900;
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    
+}
+
+
+//Ipad media
+@media (min-width: 768px) {
+    .container__portfolio {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+}
+
+//desktop media
+@media (min-width:1024px){
+    .container__portfolio{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    align-items: center;
+    }
+    .container__card {
+       display: flex;
+       justify-content: center;
+    }
+    .card{
+        margin-left: 100px;
+    }
+}
+
+//mobile media
+
+@media (max-width:480px){
+  body{
+    width:500px;
+    height:800px
+  }
+
+}
