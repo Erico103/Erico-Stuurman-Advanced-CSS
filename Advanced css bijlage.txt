@@ -1,0 +1,3 @@
+De hovereffect werkt alleen op de desktop versie, bij de ipad en de mobiele weergave moet je erop klikken. Ik heb geen idee hoe dit komt of hoe je dit moet verhelpen. Is dit omdat je op mobiel geen hover hebt?
+
+Ook zit er een marge om de portfolio pagina waar de linkerkant groter is waardoor de pagina steeds wel horizontaal te scrollen was , ik heb dit opgelost door een klein aantal min de vw te doen. Ik heb geen idee waar die marge vandaan kwam of hoe dit op te lossen. Want de width is 100% en ik heb nergens margin ingesteld denk ik.
